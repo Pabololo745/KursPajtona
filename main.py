@@ -6,7 +6,7 @@ class User:
     def __init__(self):
         self.name = input("User Name: ").strip()
         self.email = input("User Email: ").strip()
-        self.age = input("User Age: ")
+        self.age = input("User Age: ").strip()
 
     def show(self):
         print("User Name:" + self.name)
