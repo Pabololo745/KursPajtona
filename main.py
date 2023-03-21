@@ -33,11 +33,9 @@ while Running==1:
         print("\n")
     elif inp == "3":
         del_name = input("Which user you want to delete: ")
-        s=0
-        for i in array:
+        for s, i in enumerate(array):
             if i.name == del_name:
                 array.pop(s)
-            s += 1
         print(clear)
     elif inp == "4":
         print(clear)
@@ -49,4 +47,3 @@ while Running==1:
     elif inp == "5":
         print(inp)
         Running = 0
-
