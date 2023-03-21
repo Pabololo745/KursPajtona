@@ -20,7 +20,8 @@ while Running==1:
     print("2.Show User List")
     print("3.Delete User")
     print("4.Show User Data")
-    print("5.Exit")
+    print("5.Export User Data to File")
+    print("6.Exit")
     inp = input("Your Input: ")
     if inp == "1":
         array.append(User())
@@ -45,5 +46,12 @@ while Running==1:
                 i.show()
         print(2*"\n")
     elif inp == "5":
+        userData=""
+        with open("users.txt", "w") as f:
+            for s, i in enumerate(array):
+                userData+=f"{s+1}. Name: {i.name} Email: {i.email} Age: {i.age} \n"
+            f.write(userData)
+        print(clear)
+    elif inp == "6":
         print(inp)
         Running = 0
